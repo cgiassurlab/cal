@@ -80,3 +80,9 @@
     right: 0;
     top: 0;
 }
+
+#mynetwork {
+            width: 900px;
+            height: 900px;
+            border: 1px solid lightgray;
+        }
