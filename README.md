@@ -5,11 +5,6 @@ todo
 node
 
 
-set HTTP_PROXY=http://fr-proxy.groupinfra.com:3128
-set HTTPS_PROXY=http://fr-proxy.groupinfra.com:3128
-npm config set proxy http://proxy.company.com:8080
-npm config set https-proxy http://proxy.company.com:8080
-
 npm install -g cordova ionic
 npm install
 ionic serve
