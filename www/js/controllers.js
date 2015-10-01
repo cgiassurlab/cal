@@ -480,6 +480,8 @@ function draw() {
 $scope.playVisJs = function() {
   $scope.showModal('visjs/lesMiserables.html');
   draw();
+
+  //test
 };
 
 
