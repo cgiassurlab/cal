@@ -42,43 +42,43 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ListsCtrl', function($scope, $ionicModal, $ionicScrollDelegate, $ionicSlideBoxDelegate) {
-  $scope.firstItems =[ 
-    { titre: 'Premier item', description: 'Vidéo de démonstration', id: 1 },
-    
-    
+  $scope.firstItems =[
+    { titre: 'Le Lab en mouvement', description: '_    Comment nous innovons chez CGI', id: 1 },
+
+
     ];
-    
+
     $scope.secondItems = [
-    { titre: 'Deuxième item', description: 'Slide de présentation de projet', id: 2 },
-    
-    
+    { titre: 'Notre vision de l\'assurance', description: '_    Le réseau et les neurones CGI', id: 2 },
+
+
     ];
-    
+
     $scope.thirdItems = [
-    { titre: 'Troisième item', description: 'Présentatoin d\'un graphique avec des logos (GMF, Casino...) ', id: 3 },
-    
-    
+    { titre: 'Qui sommes nous ?', description: '_    En 4 slides', id: 3 },
+
+
     ];
-    
+
     $scope.fourthItems = [
-    { titre: 'Quatrième item', description: 'Ex turba vero imae sortis et paupertinae in tabernis aliqui pernoctant vinariis, non nulli velariis umbraculorum theatralium latent, quae Campanam imitatus lasciviam Catulus', id: 4 }
-    
+    { titre: 'Cela peut vous parler : Lab 01', description: '_    Ex turba vero imae sortis et paupertinae in tabernis aliqui pernoctant vinariis, non nulli velariis umbraculorum theatralium latent, quae Campanam imitatus lasciviam Catulus', id: 4 }
+
     ];
-    
+
      $scope.fiveItems = [
-    { titre: 'Cinquième item', description: 'Ex turba vero imae sortis et paupertinae in tabernis aliqui pernoctant vinariis, non nulli velariis umbraculorum theatralium latent, quae Campanam imitatus lasciviam Catulus', id: 5 }
-    
+    { titre: 'Votre Lab', description: '_    Présentation de l\'offre', id: 5 }
+
     ];
-    
-    $scope.showModal = function(templateUrl) {
- $ionicModal.fromTemplateUrl(templateUrl, {
- scope: $scope,
- animation: 'slide-in-up'
- }).then(function(modal) {
- $scope.modal = modal;
- $scope.modal.show();
- });
- }
+
+  $scope.showModal = function(templateUrl) {
+     $ionicModal.fromTemplateUrl(templateUrl, {
+     scope: $scope,
+     animation: 'slide-in-up'
+     }).then(function(modal) {
+     $scope.modal = modal;
+     $scope.modal.show();
+     });
+  };
 
  // Close the modal
  $scope.closeModal = function() {
@@ -86,12 +86,12 @@ angular.module('starter.controllers', [])
  $scope.modal.remove();
  };
 
- $scope.clipSrc = 'img/Wildlife.wmv';
+ $scope.clipSrc = 'img/angelhack.mp4';
 
 
 $scope.playVideo = function() {
  $scope.showModal('templates/video-popover.html');
-}
+};
 
  $scope.allImages = [{
  'src' : 'img/1.jpg'
@@ -103,55 +103,56 @@ $scope.playVideo = function() {
  'src' : 'img/4.jpg'
  }, {
  'src' : 'img/5.jpg'
- }, {
- 'src' : 'img/6.jpg'
- }, {
- 'src' : 'img/7.jpg'
  }];
- 
+
  $scope.showImages = function(index) {
  $scope.activeSlide = index;
  $scope.showModal('templates/image-popover.html');
- }
-
-  
+ };
 
 
 
 
-/*$scope.playImpress = function() {
- $scope.showModal('templates/impress_demo.html');
-} ;*/
 
 
-   
+$scope.playImpress = function() {
+ //$scope.showModal('templates/impress_demo.html');
+};
+
+
+
 })
-    
+
 
 
 .controller('DetailCtrl', function($scope, $stateParams) {
 
-   
-       
+
+
             // create some nodes
-            
+
             var DIR = 'img/';
       nodes = [
-        
+
         {id: 4,  shape: 'circularImage', image: DIR + 'discovery.jpg'},
         {id: 5,  shape: 'circularImage', image: DIR + 'inspeer.jpg'},
         {id: 6,  shape: 'circularImage', image: DIR + 'google_project.png'},
         {id: 7,  shape: 'circularImage', image: DIR + 'casino_1.png'},
         {id: 8,  shape: 'circularImage', image: DIR + 'cgi.jpg'},
         {id: 9,  shape: 'circularImage', image: DIR + 'swisslife.jpg'},
-        {id: 10, shape: 'circularImage', image: DIR + 'Groupama3.jpg'},
+        {id: 10, shape: 'circularImage', image: DIR + 'groupama.png'},
         {id: 11, shape: 'circularImage', image: DIR + 'axa.jpg'},
         {id: 12, shape: 'circularImage', image: DIR + 'mma.jpg'},
         {id: 13, shape: 'circularImage', image: DIR + 'gmf.jpg'},
-        {id: 14, shape: 'circularImage', image: DIR + 'sante.jpg'},
-        {id: 15, shape: 'circularImage', image: DIR + 'obj_connecte.png'}
-        
-        
+        {id: 14, shape: 'circularImage', image: DIR + 'health.png'},
+        {id: 15, shape: 'circularImage', image: DIR + 'assur-maladie.jpg'},
+        {id: 16, shape: 'circularImage', image: DIR + 'car.jpg'},
+        {id: 17, shape: 'circularImage', image: DIR + 'mutualite-francaise.png'},
+        {id: 18, shape: 'circularImage', image: DIR + 'ratabase.jpg'},
+        {id: 19, shape: 'circularImage', image: DIR + 'withings-home.png'},
+        {id: 20, shape: 'circularImage', image: DIR + 'life-coach.jpg'}
+
+
       ];
 
       // create connections between people
@@ -172,8 +173,16 @@ $scope.playVideo = function() {
         {from: 11, to: 12},
         {from: 12, to: 13},
         {from: 8, to: 14},
-        {from: 8, to: 15}
-        
+        {from: 8, to: 15},
+        {from: 16, to: 6},
+        {from: 17, to: 6},
+        {from: 18, to: 8},
+        {from: 19, to: 14},
+        {from: 20, to: 15},
+        {from: 16, to: 8},
+        {from: 19, to: 8},
+        {from: 20, to: 11}
+
       ];
 
       // create a network
@@ -198,6 +207,6 @@ $scope.playVideo = function() {
       };
       network = new vis.Network(container, data, options);
 
-    
-        
+
+
 });

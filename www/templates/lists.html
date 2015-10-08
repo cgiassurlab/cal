@@ -1,25 +1,27 @@
-<ion-view view-title="Assur'Lab App">
+<ion-view view-title="CGI Assur'Lab">
   <ion-content>
     <ion-list>
       <ion-item ng-repeat="firstItem in firstItems" class="size" ng-click="playVideo()">
         <div><img src="play.png"></div>
-        <h1>{{firstItem.titre}}</h1></br>
-        <p>{{firstItem.description}}</p>
-        
+
+          <h1>{{firstItem.titre}}</h1><br>
+          <p>{{firstItem.description}}</p>
+
+
       </ion-item>
-      <ion-item ng-repeat="secondItem in secondItems" class="size" ng-click="showImages()">
-        <div><img src="pdf_1.png"></div>
+      <ion-item ng-repeat="secondItem in secondItems" href="#/app/lists/{{secondItem.id}}" class="size">
+        <div><img src="graph.png"></div>
         <h1>{{secondItem.titre}}</h1></br>
         <p>{{secondItem.description}}</p>
-       
       </ion-item>
-      <ion-item ng-repeat="thirdItem in thirdItems" href="#/app/lists/{{thirdItem.id}}" class="size">
-        <div><img src="graph.png"></div>
+      <ion-item ng-repeat="thirdItem in thirdItems" class="size" ng-click="showImages()">
+        <div><img src="pdf_1.png"></div>
         <h1>{{thirdItem.titre}}</h1></br>
         <p>{{thirdItem.description}}</p>
+
       </ion-item>
-      <ion-item ng-repeat="fourthItem in fourthItems" href="#/app/lists//" class="size">
-        <div><img src="doc.png"></div>
+      <ion-item ng-repeat="fourthItem in fourthItems" class="size" ng-click="playImpress()">
+        <div><img src="play.png"></div>
         <h1>{{fourthItem.titre}}</h1></br>
         <p>{{fourthItem.description}}</p>
       </ion-item>
@@ -28,7 +30,7 @@
         <h1>{{fiveItem.titre}}</h1></br>
         <p>{{fiveItem.description}}</p>
       </ion-item>
-      
+
     </ion-list>
   </ion-content>
 </ion-view>
