@@ -9,7 +9,7 @@
 
 
       </ion-item>
-      <ion-item ng-repeat="secondItem in secondItems" href="#/app/lists/{{secondItem.id}}" class="size">
+      <ion-item ng-repeat="secondItem in secondItems" href="#/app/lists/graphique" class="size">
         <div><img src="graph.png"></div>
         <h1>{{secondItem.titre}}</h1></br>
         <p>{{secondItem.description}}</p>
@@ -20,7 +20,7 @@
         <p>{{thirdItem.description}}</p>
 
       </ion-item>
-      <ion-item ng-repeat="fourthItem in fourthItems" class="size" ng-click="playImpress()">
+      <ion-item ng-repeat="fourthItem in fourthItems" class="size" href="#/app/lists/impress"">
         <div><img src="play.png"></div>
         <h1>{{fourthItem.titre}}</h1></br>
         <p>{{fourthItem.description}}</p>

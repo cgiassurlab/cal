@@ -44,15 +44,26 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
-  .state('app.single', {
-    url: '/lists/:detailId',
+  .state('app.graphique', {
+    url: '/lists/graphique',
     views: {
       'menuContent': {
-        templateUrl: 'templates/detail.html',
-        controller: 'DetailCtrl'
+        templateUrl: '../templates/graphique.html',
+        controller: 'graphiqueCtrl'
       }
     }
-  });
+  })
+  
+  .state('app.impress', {
+    url: '/lists/impress',
+    views: {
+      'menuContent': {
+        templateUrl: '../templates/impress.html',
+        controller : 'impressCtrl'
+      }
+    }
+  })
+  ;
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/lists');
 });
